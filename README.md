@@ -166,3 +166,27 @@ Se estiver executando um firewall em sua máquina, você precisará permitir o t
 
 # Testando o Squid:
 Após a configuração, você pode testar o Squid configurando um navegador da web ou outra aplicação para usar o Squid como um proxy HTTP na porta configurada (por padrão, 3128). 
+
+## No Firefox
+
+### Abra as Configurações do Firefox
+
+Abra o Firefox em seu computador.
+Clique no menu no canto superior direito (três linhas horizontais) e selecione "Preferências" (em sistemas macOS, isso pode ser "Preferências do Firefox").
+
+### Acesse as Configurações de Rede
+
+No painel esquerdo das preferências, selecione "Geral" e role para baixo até encontrar a seção "Rede e Conexão".
+Clique em "Configurações..." ao lado de "Conexão".
+
+### Configure o Proxy
+
+Selecione a opção "Configuração manual de proxy".
+Na seção "HTTP Proxy", insira "localhost" na caixa de texto ao lado e "3128" na caixa de porta.
+Se desejar, você também pode configurar proxies para HTTPS, FTP e SOCKS. Se o seu servidor proxy local suportar esses protocolos e estiver rodando nas mesmas configurações de porta, você pode configurá-los da mesma maneira.
+Marque a caixa "Usar este proxy para todos os protocolos".
+Clique em "OK" para salvar as configurações.
+
+### Verificar a Conexão
+
+Após salvar as configurações, feche a janela de preferências.
