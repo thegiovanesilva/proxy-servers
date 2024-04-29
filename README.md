@@ -109,8 +109,6 @@ services:
     volumes:
       # Arquivo de configuração do Squid
       - ./squid.conf:/etc/squid/squid.conf
-      # Lista de sites bloqueados
-      - ./bloqueados:/etc/squid/bloqueados.txt
       # Arquivo de log
       - ./logs:/var/log/squid
       # Diretório de cache
