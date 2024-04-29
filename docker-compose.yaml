@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  squid:
+    image: sameersbn/squid:latest
+    container_name: squid
+    restart: always
+    # Limpa o conteúdo de access.log e cache.log
+    command: bash -c "echo '' > /var/log/squid/access.log && echo '' > /var/log/squid/cache.log && squid -N -d 1"
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      # Usar a porta 8080 para acessar o Squid
+      - "3128:3128"
+    volumes:
+      # Arquivo de configuração do Squid
+      - ./squid.conf:/etc/squid/squid.conf
+      # Arquivo de log
+      - ./logs:/var/log/squid
+      # Diretório de cache
+      - ./cache:/var/spool/squid
+    
